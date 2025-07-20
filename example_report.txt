@@ -1,0 +1,20 @@
+
+--- Server Health Report ---
+Report Period     : 2025-07-20 09:13:58  to 2025-07-20 09:14:10 
+Total Data Points : 4
+
+--- Usage Statistics ---
+Average CPU Usage : 10.65%
+Peak CPU Usage    : 24.70%
+Average RAM Usage : 21.88%
+Peak RAM Usage    : 21.90%
+Average Disk Usage: 16.00%
+Peak Disk Usage   : 16.00%
+
+--- Alerts & Warnings ---
+CPU Alerts        : 0
+CPU Warnings      : 0
+RAM Alerts        : 0
+RAM Warnings      : 0
+Disk Alerts       : 0
+Disk Warnings     : 0

@@ -33,7 +33,7 @@ def collect_and_log():
     elif disk_usage > 60:
         disk_status = "WARNING"
 
-    log = f"{timestamp}, CPU={cpu_usage}, CPU STATUS={cpu_status} ,RAM={ram_usage}, RAM STATUS={ram_status}, DISK={disk_usage}, DISK STATUS={disk_status}"
+    log = f"{timestamp} ,CPU={cpu_usage} ,CPU STATUS={cpu_status} ,RAM={ram_usage} ,RAM STATUS={ram_status} ,DISK={disk_usage} ,DISK STATUS={disk_status}"
 
     with open(LOG_FILE, "a") as f:
         f.write(log + "\n")

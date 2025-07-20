@@ -1,2 +1,4 @@
 /venv
 server.log
+daily_report_*.txt
+/reports
