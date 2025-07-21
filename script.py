@@ -2,7 +2,7 @@ import psutil
 import time
 from datetime import datetime
 
-LOG_FILE = "server.log"
+LOG_FILE = "/home/yui/Documents/servix/server.log"
 
 def collect_and_log():
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

@@ -2,11 +2,12 @@ import psutil
 import os
 from datetime import datetime
 
-LOG_FILE = "server.log"
+LOG_FILE = "/home/yui/Documents/servix/server.log"
+REPORT_DIR = "/home/yui/Documents/servix/reports"
+
 metrics_data = [] #menyimpan list
 
 # Ambil tangal hari ini
-REPORT_DIR = "reports"
 today = datetime.today().strftime('%Y-%m-%d')
 REPORT_FILE = f"{REPORT_DIR}/daily_report_{today}.txt"
 
@@ -89,7 +90,7 @@ else:
             if entry['RAM_STATUS'] == 'WARNING':
                 ram_warnings += 1
         
-        if 'DISK_TATUS' in entry:
+        if 'DISK_STATUS' in entry:
             if entry['DISK_STATUS'] == 'ALERT':
                 disk_alerts += 1
             elif entry['DISK_STATUS'] == 'WARNING':
@@ -105,7 +106,7 @@ avg_disk = total_disk / num_entries
 first_timestamp_str = metrics_data[0]['timestamp']
 last_timestamp_str = metrics_data[-1]['timestamp']
 
-# Tulis laporan ke 
+# Tulis laporan 
 with open(REPORT_FILE, 'w') as f:
     f.write("\n--- Server Health Report ---\n")
     f.write(f"Report Period     : {first_timestamp_str} to {last_timestamp_str}\n")
